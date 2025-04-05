@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "ES6",
+        "baseUrl": "./",
+        "paths": {
+            "@datafloww/analytics": ["node_modules/@datafloww/analytics"]
+        }
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "**/*.spec.js"]
+}
