@@ -1,56 +1,73 @@
-# Nano React App Default Javascript Template
+# Welcome to your Lovable project
 
-The default template project for [nano-react-app](https://github.com/nano-react-app/nano-react-app).
+## Project info
 
-- `npm start` — This will spawn a development server with a default port of `5173`.
-- `npm run build` — This will output a production build in the `dist` directory.
-- `npm run preview` — This will run the production build locally with a default port of `5173` (this will not work if you haven't generated the production build yet).
+**URL**: https://lovable.dev/projects/a136d6e8-bb63-4d1c-82fb-fb905e11a5a6
 
-## Custom port
+## How can I edit this code?
 
-You can use the `-p` flag to specify a port for development. To do this, you can either run `npm start` with an additional flag:
+There are several ways of editing your application.
 
-```
-npm start -- --port 3000
-```
+**Use Lovable**
 
-Or edit the `start` script directly:
+Simply visit the [Lovable Project](https://lovable.dev/projects/a136d6e8-bb63-4d1c-82fb-fb905e11a5a6) and start prompting.
 
-```
-vite --port 3000
-```
+Changes made via Lovable will be committed automatically to this repo.
 
-## Adding styles
+**Use your preferred IDE**
 
-You can use CSS files with simple ES2015 `import` statements anywhere in your Javascript:
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-```js
-import "./index.css";
-```
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-## Babel transforms
+Follow these steps:
 
-The Babel preset [babel-preset-nano-react-app](https://github.com/nano-react-app/babel-preset-nano-react-app) is used to support the same transforms that Create React App supports.
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
-The Babel configuration lives inside `package.json` and will override an external `.babelrc` file, so if you want to use `.babelrc` remember to delete the `babel` property inside `package.json`.
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
+# Step 3: Install the necessary dependencies.
+npm i
 
-## Deploy to GitHub Pages
-
-You can also deploy your project using GitHub pages.
-First install the `gh-pages` [package](https://github.com/tschaub/gh-pages):
-
-`npm i -D gh-pages`
-
-Use the following scripts for deployment:
-
-```js
-"scripts": {
-  "start": "vite",
-  "build": "vite build",
-  "predeploy": "rm -rf dist && vite build",
-  "deploy": "gh-pages -d dist"
-},
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
 ```
 
-Then follow the normal procedure in GitHub Pages and select the `gh-pages` branch.
+**Edit a file directly in GitHub**
+
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
+
+**Use GitHub Codespaces**
+
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
+
+## What technologies are used for this project?
+
+This project is built with:
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+## How can I deploy this project?
+
+Simply open [Lovable](https://lovable.dev/projects/a136d6e8-bb63-4d1c-82fb-fb905e11a5a6) and click on Share -> Publish.
+
+## Can I connect a custom domain to my Lovable project?
+
+Yes it is!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
