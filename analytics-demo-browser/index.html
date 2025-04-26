@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeService Pro - Your Home Service Solution</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        (() => { "use strict"; var a = "analytics", t = window[a] = window[a] || []; t.load = function (a) { var t = `https://api.datafloww.me/analytics/v1/${a}/analytics.min.js`, n = document.createElement("script"); n.type = "text/javascript", n.async = !0, n.setAttribute("data-global-df-analytics-key", a), n.src = t, n.onload = () => { window._analytics ? window.analytics = _analytics.init({ plugins: [analyticsEventPlugin(a)] }) : console.error("Analytics script failed to load."), analytics.page() }; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(n, i) }, t.SNIPPET_VERSION = "1.0.0", t._key = "2a8b9a42-b720c1cb", t.load("2a8b9a42-b720c1cb") })();
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HomeService Pro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-75">
+                <div class="col-lg-6">
+                    <h1>Professional Home Services at Your Fingertips</h1>
+                    <p class="lead">Book reliable home services with just a few clicks. From cleaning to repairs, we've
+                        got you covered.</p>
+                    <a href="services.html" class="btn btn-primary btn-lg"
+                        onclick="analytics.track('landing_cta_click', {button: 'explore_services'})">Explore
+                        Services</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://via.placeholder.com/600x400" alt="Home Services" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="features py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose HomeService Pro?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <i class="fas fa-clock fa-3x mb-3"></i>
+                        <h3>24/7 Booking</h3>
+                        <p>Book services anytime, anywhere</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <i class="fas fa-shield-alt fa-3x mb-3"></i>
+                        <h3>Verified Professionals</h3>
+                        <p>All our service providers are vetted</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <i class="fas fa-star fa-3x mb-3"></i>
+                        <h3>Quality Guarantee</h3>
+                        <p>100% satisfaction guaranteed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 HomeService Pro. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-code.js"></script>
+    <script>
+        // Track page view
+        analytics.page('Landing Page', {
+            title: 'HomeService Pro - Home',
+            url: window.location.href
+        });
+
+        // Track feature card views
+        document.querySelectorAll('.feature-card').forEach(card => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        analytics.track('feature_card_view', {
+                            feature_name: entry.target.querySelector('h3').textContent
+                        });
+                    }
+                });
+            });
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>
